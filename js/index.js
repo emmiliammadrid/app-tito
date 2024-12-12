@@ -17,11 +17,11 @@ const pantallaLogin = `<h1 class="app-container-title">Log In</h1>
               <input class="button" type="submit" value="Login" />
             </form>
             <button class="button" onclick="renderRegistro()">Crear cuenta</button>`;
-            const pantalla404 = ` <h1 class="app-container-title">404</h1>
-            <p>Pagina en construcción</p>
-            <button class="button" onclick="renderLogin()">Logout</button>`;
+            //const pantalla404 = ` <h1 class="app-container-title">404</h1>
+            //<p>Pagina en construcción</p>
+            //<button class="button" onclick="renderLogin()">Logout</button>`;
 
-// app.innerHTML = pantallaLogin;
+app.innerHTML = pantallaLogin;
 function renderLogin() {
   app.innerHTML = pantallaLogin;
   //Logica de Login
@@ -106,5 +106,29 @@ function renderRegistro() {
     const bdUsuariosJSON = JSON.stringify(bdUsuarios);
     localStorage.setItem("usuarios", bdUsuariosJSON);
     app.innerHTML = pantalla404;
+  };
+}
+function renderLogin() {
+  app.innerHTML = pantallaLogin;
+
+  const loginForm = document.getElementById("login-form");
+
+  loginForm.onsubmit = (evento) => {
+      evento.preventDefault();
+      const username = evento.target.username.value;
+      const password = evento.target.password.value;
+      let userFound = false;
+
+      for (const usuario of bdUsuarios) {
+          if (usuario.username === username && usuario.password === password) {
+              userFound = true;
+              localStorage.setItem("username", username);
+              initDiceApp(); // Cargar la aplicación de Dados
+              return;
+          }
+      }
+      if (!userFound) {
+          alert("Usuario o contraseña incorrectos");
+      }
   };
 }
