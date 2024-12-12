@@ -1,1 +1,1 @@
-En esta web se puede iniciar sesión a un lugar. en caso de no tener cuenta, el usuario se puede crear una nueva agregando su nombre de usuario ÚNICO y creando una contraseña.
+esta web te permite inciar sesión o registrarte en un juego de suma de dados. Esta hecho mayormente con JS para poder comunicarse y conectar con el usuario. Te avisa si ya hay cuentas vinculadas con tu nombre, si tu usuario o contraseña son incorrectos. Tiene un diseño delicado y fresco, haciendote conectar con el océano y sus profundidades a traves de sus colores y las imágenes que lo componen.
