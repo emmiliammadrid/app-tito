@@ -145,13 +145,12 @@ body.dark {
   background-color: var(--secundario-oscuro);
 }
 /* Imagen como fondo (móviles) */
-/* Imagen como fondo (móviles) */
 @media (max-width: 768px) {
   .main-container {
     flex-direction: column;
     min-height: 100vh;
     position: relative; /* Permite posicionar los elementos dentro */
-    background-image: url('https://i.pinimg.com/736x/4d/5e/45/4d5e45149c030340fb61bc0aa93086fc.jpg'); /* Reemplaza con la ruta de tu imagen */
+    background-image: url('https://i.pinimg.com/736x/4d/5e/45/4d5e45149c030340fb61bc0aa93086fc.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
